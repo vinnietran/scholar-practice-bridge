@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Users, Award, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import professorHeadshot from "@/assets/professor-headshot.jpg";
 
 const highlights = [
   {
@@ -54,9 +53,9 @@ export default function Index() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsla(210,80%,40%,0.4)_0%,_transparent_60%)]" />
         
         <div className="container-wide relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center py-20 md:py-28">
+          <div className="py-20 md:py-28">
             {/* Content */}
-            <div className="space-y-8 animate-fade-in">
+            <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in">
               <div className="space-y-4">
                 <p className="text-white/80 font-medium tracking-wide uppercase text-sm">
                   Scholar · Educator · Consultant
@@ -69,13 +68,13 @@ export default function Index() {
                 </p>
               </div>
               
-              <p className="text-white/80 text-lg leading-relaxed max-w-xl">
+              <p className="text-white/80 text-lg leading-relaxed max-w-xl mx-auto">
                 Assistant Professor of Business Administration at Shepherd University and 
                 George Washington Chair of Living Ethics, translating research into actionable 
                 strategies for organizations seeking sustainable excellence.
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button variant="hero" asChild className="bg-white text-primary hover:bg-white/90">
                   <Link to="/scholarship">
                     Explore My Research
@@ -87,18 +86,6 @@ export default function Index() {
                     Inquire About Consulting
                   </Link>
                 </Button>
-              </div>
-            </div>
-
-            {/* Image */}
-            <div className="relative animate-fade-in-delay-2 hidden lg:block">
-              <div className="relative mx-auto max-w-md">
-                <div className="absolute -inset-4 bg-white/10 rounded-2xl blur-2xl" />
-                <img
-                  src={professorHeadshot}
-                  alt="Dr. Joshua J. Beck, Professor of Management and Leadership"
-                  className="relative rounded-xl shadow-elevated w-full object-contain"
-                />
               </div>
             </div>
           </div>
