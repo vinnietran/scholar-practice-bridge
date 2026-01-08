@@ -109,16 +109,16 @@ export default function Consulting() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding bg-[var(--hero-gradient)] text-primary-foreground">
+      <section className="section-padding bg-primary">
         <div className="container-wide">
           <div className="max-w-3xl">
-            <p className="text-primary-foreground/70 font-medium tracking-wide uppercase text-sm mb-2">
+            <p className="text-white/80 font-medium tracking-wide uppercase text-sm mb-2">
               Consulting & Executive Education
             </p>
-            <h1 className="text-primary-foreground mb-6">
+            <h1 className="text-white mb-6">
               Bridging Research and Results
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
+            <p className="text-xl text-white/90 leading-relaxed mb-8">
               I partner with business leaders, nonprofit executives, and public-sector organizations 
               to translate rigorous research into actionable strategies that drive meaningful, 
               sustainable improvement.
@@ -126,7 +126,7 @@ export default function Consulting() {
             <Button 
               variant="hero" 
               asChild 
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+              className="bg-white text-primary hover:bg-white/90"
             >
               <Link to="/contact">
                 Schedule a Consultation
@@ -144,7 +144,7 @@ export default function Consulting() {
             <img 
               src={drbLogo} 
               alt="DRB Management & Leadership Consulting LLC" 
-              className="h-20 mx-auto mb-6"
+              className="h-32 md:h-40 mx-auto mb-6"
             />
             <p className="text-muted-foreground text-lg">
               Through DRB Consulting, I provide strategic direction, executive coaching, and 
