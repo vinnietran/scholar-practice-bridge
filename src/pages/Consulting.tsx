@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-
+import drbLogo from "@/assets/drb-consulting-logo.png";
 const services = [
   {
     icon: BarChart3,
@@ -141,7 +141,11 @@ export default function Consulting() {
       <section className="section-padding bg-background">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="mb-4">DRB Management and Leadership Consulting</h2>
+            <img 
+              src={drbLogo} 
+              alt="DRB Management & Leadership Consulting LLC" 
+              className="h-20 mx-auto mb-6"
+            />
             <p className="text-muted-foreground text-lg">
               Through DRB Consulting, I provide strategic direction, executive coaching, and 
               tailored leadership programs to enhance organizational performance and align 
