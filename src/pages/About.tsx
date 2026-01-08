@@ -70,7 +70,7 @@ export default function About() {
                 <img
                   src={professorHeadshot}
                   alt="Dr. Joshua J. Beck"
-                  className="rounded-xl shadow-elevated w-full max-w-sm mx-auto lg:mx-0 object-cover aspect-[4/5]"
+                  className="rounded-xl shadow-elevated w-full max-w-sm mx-auto lg:mx-0 object-contain"
                 />
                 <div className="mt-6 text-center lg:text-left">
                   <p className="text-sm text-muted-foreground">

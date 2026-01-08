@@ -97,7 +97,7 @@ export default function Index() {
                 <img
                   src={professorHeadshot}
                   alt="Dr. Joshua J. Beck, Professor of Management and Leadership"
-                  className="relative rounded-xl shadow-elevated w-full object-cover aspect-[4/5]"
+                  className="relative rounded-xl shadow-elevated w-full object-contain"
                 />
               </div>
             </div>
