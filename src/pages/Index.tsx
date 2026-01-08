@@ -50,39 +50,39 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[var(--hero-gradient)] text-primary-foreground">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsla(210,60%,40%,0.3)_0%,_transparent_60%)]" />
+      <section className="relative overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsla(210,80%,40%,0.4)_0%,_transparent_60%)]" />
         
         <div className="container-wide relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center py-20 md:py-28">
             {/* Content */}
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
-                <p className="text-primary-foreground/70 font-medium tracking-wide uppercase text-sm">
+                <p className="text-white/80 font-medium tracking-wide uppercase text-sm">
                   Scholar · Educator · Consultant
                 </p>
-                <h1 className="text-primary-foreground text-balance">
+                <h1 className="text-white text-balance">
                   Joshua J. Beck, Ph.D.
                 </h1>
-                <p className="text-xl md:text-2xl text-primary-foreground/80 font-light leading-relaxed">
+                <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed">
                   Bridging Rigorous Scholarship and Real-World Impact in Management, Leadership, and Organizational Ethics
                 </p>
               </div>
               
-              <p className="text-primary-foreground/70 text-lg leading-relaxed max-w-xl">
+              <p className="text-white/80 text-lg leading-relaxed max-w-xl">
                 Assistant Professor of Business Administration at Shepherd University and 
                 George Washington Chair of Living Ethics, translating research into actionable 
                 strategies for organizations seeking sustainable excellence.
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button variant="hero" asChild className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+                <Button variant="hero" asChild className="bg-white text-primary hover:bg-white/90">
                   <Link to="/scholarship">
                     Explore My Research
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="heroOutline" asChild>
+                <Button variant="heroOutline" asChild className="border-white text-white hover:bg-white/10">
                   <Link to="/consulting">
                     Inquire About Consulting
                   </Link>
@@ -93,7 +93,7 @@ export default function Index() {
             {/* Image */}
             <div className="relative animate-fade-in-delay-2 hidden lg:block">
               <div className="relative mx-auto max-w-md">
-                <div className="absolute -inset-4 bg-primary-foreground/10 rounded-2xl blur-2xl" />
+                <div className="absolute -inset-4 bg-white/10 rounded-2xl blur-2xl" />
                 <img
                   src={professorHeadshot}
                   alt="Dr. Joshua J. Beck, Professor of Management and Leadership"
