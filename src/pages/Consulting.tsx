@@ -13,7 +13,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import { ClientLogoCarousel } from "@/components/ClientLogoCarousel";
 import drbLogo from "@/assets/drb-consulting-logo.png";
+
 const services = [
   {
     icon: BarChart3,
@@ -89,11 +91,13 @@ const speakingTopics = [
 ];
 
 const clients = [
-  "Waffle House",
-  "Point O Woods Golf & Country Club",
-  "KLUK Custom Calls",
-  "Harvest Trails Co.",
-  "Argo Books",
+  { name: "Tallo", url: "https://tallo.com" },
+  { name: "WealthFluent", url: "https://wealthfluent.com" },
+  { name: "Waffle House" },
+  { name: "Point O Woods Golf & Country Club" },
+  { name: "KLUK Custom Calls" },
+  { name: "Harvest Trails Co." },
+  { name: "Argo Books" },
 ];
 
 const outcomes = [
@@ -235,18 +239,9 @@ export default function Consulting() {
             </div>
 
             <div className="card-elevated p-8">
-              <h3 className="text-xl mb-6">Select Clients</h3>
-              <div className="flex flex-wrap gap-3">
-                {clients.map((client) => (
-                  <span 
-                    key={client} 
-                    className="px-4 py-2 bg-secondary rounded-lg text-secondary-foreground font-medium"
-                  >
-                    {client}
-                  </span>
-                ))}
-              </div>
-              <p className="text-muted-foreground text-sm mt-6">
+              <h3 className="text-xl mb-6 text-center">Select Clients</h3>
+              <ClientLogoCarousel clients={clients} interval={3000} />
+              <p className="text-muted-foreground text-sm mt-6 text-center">
                 From nationally recognized brands to growing local businesses, I work with 
                 organizations committed to excellence and continuous improvement.
               </p>
