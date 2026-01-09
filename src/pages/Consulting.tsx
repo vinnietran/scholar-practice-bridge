@@ -15,6 +15,8 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ClientLogoCarousel } from "@/components/ClientLogoCarousel";
 import drbLogo from "@/assets/drb-consulting-logo.png";
+import talloLogo from "@/assets/tallo-logo.png";
+import wealthfluentLogo from "@/assets/wealthfluent-logo.png";
 
 const services = [
   {
@@ -91,8 +93,8 @@ const speakingTopics = [
 ];
 
 const clients = [
-  { name: "Tallo", url: "https://tallo.com" },
-  { name: "WealthFluent", url: "https://wealthfluent.com" },
+  { name: "Tallo", logo: talloLogo, url: "https://tallo.com" },
+  { name: "WealthFluent", logo: wealthfluentLogo, url: "https://wealthfluent.com" },
   { name: "Waffle House" },
   { name: "Point O Woods Golf & Country Club" },
   { name: "KLUK Custom Calls" },
