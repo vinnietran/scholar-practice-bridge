@@ -101,7 +101,7 @@ const clients = [
   { name: "WealthFluent", logo: wealthfluentLogo, url: "https://wealthfluent.com" },
   { name: "Waffle House", logo: waffleHouseLogo },
   { name: "Point O Woods Golf & Country Club" },
-  { name: "KLUK Custom Calls", logo: klukLogo },
+  { name: "KLUK Custom Calls", logo: klukLogo, logoSize: "lg" as const },
   { name: "Harvest Trails Co.", logo: harvastTrailsLogo },
   { name: "Argo Media", logo: argoMediaLogo },
 ];
