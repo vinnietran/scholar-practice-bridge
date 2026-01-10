@@ -20,6 +20,7 @@ import wealthfluentLogo from "@/assets/wealthfluent-logo.png";
 import waffleHouseLogo from "@/assets/waffle-house-logo.jpg";
 import klukLogo from "@/assets/kluk-logo.jpg";
 import harvastTrailsLogo from "@/assets/harvast-trails-logo.png";
+import argoMediaLogo from "@/assets/argo-media-logo.png";
 
 const services = [
   {
@@ -102,7 +103,7 @@ const clients = [
   { name: "Point O Woods Golf & Country Club" },
   { name: "KLUK Custom Calls", logo: klukLogo },
   { name: "Harvest Trails Co.", logo: harvastTrailsLogo },
-  { name: "Argo Books" },
+  { name: "Argo Media", logo: argoMediaLogo },
 ];
 
 const outcomes = [
