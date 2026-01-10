@@ -98,9 +98,9 @@ const speakingTopics = [
 
 const clients = [
   { name: "Waffle House", logo: waffleHouseLogo },
-  { name: "Harvest Trails Co.", logo: harvastTrailsLogo },
   { name: "Tallo", logo: talloLogo, url: "https://tallo.com" },
   { name: "WealthFluent", logo: wealthfluentLogo, url: "https://wealthfluent.com" },
+  { name: "Harvest Trails Co.", logo: harvastTrailsLogo },
   { name: "Argo Media", logo: argoMediaLogo },
   { name: "Point O Woods Golf & Country Club" },
   { name: "KLUK Custom Calls", logo: klukLogo, logoSize: "lg" as const },
