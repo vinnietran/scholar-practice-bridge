@@ -25,7 +25,6 @@ const education = [
 const certificates = [
   "Artificial Intelligence and Career Empowerment – University of Maryland",
   "The Science of Happiness at Work – UC Berkeley",
-  "Diversity, Equity and Inclusion in the Workplace – USF",
   "Strategic Management Professional Certificate – UPenn",
 ];
 
