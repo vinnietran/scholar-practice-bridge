@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 interface ClientLogo {
   name: string;
   logo?: string;
+  logoSize?: "sm" | "md" | "lg";
 }
 
 interface ClientLogoCarouselProps {
@@ -27,6 +28,12 @@ export function ClientLogoCarousel({ clients, interval = 3000 }: ClientLogoCarou
   }, [clients.length, interval]);
 
   const currentClient = clients[currentIndex];
+  
+  const sizeClasses = {
+    sm: "h-16 md:h-20 max-w-[200px]",
+    md: "h-20 md:h-24 max-w-[220px]",
+    lg: "h-24 md:h-28 max-w-[250px]",
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[120px]">
@@ -39,7 +46,7 @@ export function ClientLogoCarousel({ clients, interval = 3000 }: ClientLogoCarou
           <img 
             src={currentClient.logo} 
             alt={currentClient.name}
-            className="h-16 md:h-20 max-w-[200px] object-contain"
+            className={`${sizeClasses[currentClient.logoSize || "sm"]} object-contain`}
           />
         ) : (
           <span className="px-6 py-3 bg-secondary rounded-lg text-secondary-foreground font-medium text-lg">
