@@ -17,6 +17,9 @@ import { ClientLogoCarousel } from "@/components/ClientLogoCarousel";
 import drbLogo from "@/assets/drb-consulting-logo.png";
 import talloLogo from "@/assets/tallo-logo.png";
 import wealthfluentLogo from "@/assets/wealthfluent-logo.png";
+import waffleHouseLogo from "@/assets/waffle-house-logo.jpg";
+import klukLogo from "@/assets/kluk-logo.jpg";
+import harvastTrailsLogo from "@/assets/harvast-trails-logo.png";
 
 const services = [
   {
@@ -95,10 +98,10 @@ const speakingTopics = [
 const clients = [
   { name: "Tallo", logo: talloLogo, url: "https://tallo.com" },
   { name: "WealthFluent", logo: wealthfluentLogo, url: "https://wealthfluent.com" },
-  { name: "Waffle House" },
+  { name: "Waffle House", logo: waffleHouseLogo },
   { name: "Point O Woods Golf & Country Club" },
-  { name: "KLUK Custom Calls" },
-  { name: "Harvest Trails Co." },
+  { name: "KLUK Custom Calls", logo: klukLogo },
+  { name: "Harvest Trails Co.", logo: harvastTrailsLogo },
   { name: "Argo Books" },
 ];
 
