@@ -147,7 +147,6 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-6">
             {education.map((edu) => (
               <div key={edu.degree} className="card-elevated p-6">
-                <p className="text-sm text-primary font-medium mb-1">{edu.year}</p>
                 <h3 className="text-lg mb-2">{edu.degree}</h3>
                 <p className="text-muted-foreground">{edu.institution}</p>
               </div>
