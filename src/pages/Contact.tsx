@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "jbeck@shepherd.edu",
-    href: "mailto:jbeck@shepherd.edu",
+    value: "joshua.joseph.beck@gmail.com",
+    href: "mailto:joshua.joseph.beck@gmail.com",
   },
   {
     icon: Phone,

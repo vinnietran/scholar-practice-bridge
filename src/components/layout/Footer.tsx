@@ -13,7 +13,7 @@ const navigation = {
   social: [
     {
       name: "Email",
-      href: "mailto:jbeck@shepherd.edu",
+      href: "mailto:joshua.joseph.beck@gmail.com",
       icon: Mail,
     },
     {
