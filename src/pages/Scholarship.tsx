@@ -84,7 +84,7 @@ const presentations = [
 
 const worksInProgress = [
   "Strategic Management OER Textbook (with J. Dovel) – Open Educational Resources for BADM 407",
-  "Measuring the impact of authentic leadership (with K. Sharp)",
+  "Measuring the impact of authentic leadership (with K. Reid)",
   "Reviewing the ethical framework of strategic human resources (with A. Mahammah & J. Dovel)",
   "Leadership development and student success: Impact of a first-year student program",
   "A leader's role in generating motivation, job satisfaction, and job performance",
