@@ -61,7 +61,7 @@ export default function Index() {
                   Scholar · Educator · Consultant
                 </p>
                 <h1 className="text-white text-balance">
-                  Joshua J. Beck, Ph.D.
+                  Joshua J. Beck, Ph.D., MBA
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed">
                   Bridging Rigorous Scholarship and Real-World Impact in Management, Leadership, and Organizational Ethics
