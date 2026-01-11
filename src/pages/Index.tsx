@@ -60,8 +60,8 @@ export default function Index() {
                 <p className="text-white/80 font-medium tracking-wide uppercase text-sm">
                   Scholar · Educator · Consultant
                 </p>
-                <h1 className="text-white text-balance text-3xl md:text-4xl lg:text-5xl">
-                  Joshua J. Beck, Ph.D., MBA
+                <h1 className="text-white text-balance">
+                  Joshua J. Beck, Ph.D.
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed">
                   Bridging Rigorous Scholarship and Real-World Impact in Management, Leadership, and Organizational Ethics
