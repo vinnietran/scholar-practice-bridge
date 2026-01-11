@@ -74,10 +74,10 @@ export default function About() {
                 <div className="mt-6 text-center lg:text-left">
                   <p className="text-sm text-muted-foreground">
                     <a 
-                      href="mailto:jbeck@shepherd.edu" 
+                      href="mailto:joshua.joseph.beck@gmail.com" 
                       className="link-underline"
                     >
-                      jbeck@shepherd.edu
+                      joshua.joseph.beck@gmail.com
                     </a>
                   </p>
                   <p className="text-sm text-muted-foreground mt-1">
