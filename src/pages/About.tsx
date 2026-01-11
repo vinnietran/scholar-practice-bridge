@@ -81,7 +81,7 @@ export default function About() {
                     </a>
                   </p>
                   <p className="text-sm text-muted-foreground mt-1">
-                    (814) 421-0050
+                    (240) 343-4015
                   </p>
                 </div>
               </div>

@@ -25,8 +25,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(814) 421-0050",
-    href: "tel:+18144210050",
+    value: "(240) 343-4015",
+    href: "tel:+12403434015",
   },
   {
     icon: MapPin,
