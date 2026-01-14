@@ -91,8 +91,8 @@ const speakingTopics = [
   },
   {
     icon: Building2,
-    title: "Authentic Leadership",
-    description: "The power of authenticity in leadership—building trust, inspiring teams, and creating lasting impact.",
+    title: "Strategic Management",
+    description: "Aligning organizational vision with execution—translating strategy into actionable plans that drive sustainable growth.",
   },
 ];
 
