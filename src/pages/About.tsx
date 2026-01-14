@@ -221,7 +221,7 @@ export default function About() {
                   <p className="text-primary">DRB Management and Leadership Consulting, 2023–Present</p>
                   <p className="text-muted-foreground text-sm mt-1">
                     Strategic direction, executive coaching, and leadership programs for organizations 
-                    including Waffle House, Point O Woods Golf & Country Club, and others.
+                    including Waffle House, Tallo, WealthFluent, Harvest Trails, Argo Media, Kluk Calls, and others.
                   </p>
                 </div>
               </div>
