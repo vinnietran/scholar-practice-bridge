@@ -92,7 +92,7 @@ const speakingTopics = [
   {
     icon: Building2,
     title: "Strategic Management",
-    description: "Aligning organizational vision with execution—translating strategy into actionable plans that drive sustainable growth.",
+    description: "Aligning vision with execution—how leaders translate strategy into results that drive sustainable growth.",
   },
 ];
 
