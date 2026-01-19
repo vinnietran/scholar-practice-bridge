@@ -299,6 +299,7 @@ export default function Consulting() {
             </div>
           </div>
 
+          <h3 className="text-2xl text-center mb-8">What We Offer</h3>
           <div className="grid lg:grid-cols-2 gap-8">
             {services.map((service) => (
               <div key={service.title} className="card-elevated p-8">
