@@ -9,7 +9,15 @@ import {
   Lightbulb,
   BarChart3,
   Heart,
-  CheckCircle
+  CheckCircle,
+  Shield,
+  UserCheck,
+  Flame,
+  Mountain,
+  HandHeart,
+  Star,
+  Eye,
+  Compass
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
@@ -171,6 +179,124 @@ export default function Consulting() {
               tailored leadership programs to enhance organizational performance and align 
               talent with business objectives for growth and innovation.
             </p>
+          </div>
+
+          {/* Mission, Vision, Values */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {/* Mission */}
+            <div className="card-elevated p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                  <Compass className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl">Our Mission</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                DRB Management & Leadership Consulting empowers top executives and organizations of every size, 
+                from startups to Fortune 500 companies, nonprofits, and government entities. We transform 
+                evidence-based research into actionable insights through executive coaching, leadership development, 
+                strategic planning, and customized organizational studies. Our work elevates organizational 
+                effectiveness and delivers enhanced performance at scale.
+              </p>
+            </div>
+
+            {/* Vision */}
+            <div className="card-elevated p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                  <Eye className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl">Our Vision</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                To be the trusted partner that develops exceptional leaders and builds high-performing 
+                organizations through evidence-based excellence.
+              </p>
+            </div>
+          </div>
+
+          {/* Values */}
+          <div className="mb-16">
+            <h3 className="text-2xl text-center mb-8">Our Values</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="card-elevated p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                    <Shield className="h-5 w-5" />
+                  </div>
+                  <h4 className="font-semibold">Integrity</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  We act with unwavering honesty, transparency, and ethical consistency, building enduring 
+                  trust as the foundation of every partnership and recommendation.
+                </p>
+              </div>
+
+              <div className="card-elevated p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                    <UserCheck className="h-5 w-5" />
+                  </div>
+                  <h4 className="font-semibold">Client-Focused</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  We put our clients first, tailoring evidence-based solutions to their unique challenges 
+                  and goals, ensuring every engagement delivers meaningful, personalized value.
+                </p>
+              </div>
+
+              <div className="card-elevated p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                    <Flame className="h-5 w-5" />
+                  </div>
+                  <h4 className="font-semibold">Passion</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  We bring genuine enthusiasm, deep commitment, and relentless energy to fuel transformative 
+                  progress for leaders and organizations.
+                </p>
+              </div>
+
+              <div className="card-elevated p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                    <Mountain className="h-5 w-5" />
+                  </div>
+                  <h4 className="font-semibold">Grit</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  We persevere with resilience, determination, and tenacity, embracing obstacles and pushing 
+                  forward to achieve sustainable, high-impact results.
+                </p>
+              </div>
+
+              <div className="card-elevated p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                    <HandHeart className="h-5 w-5" />
+                  </div>
+                  <h4 className="font-semibold">Respect</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  We treat every client, colleague, and stakeholder with dignity, empathy, and fairness, 
+                  creating relationships built on mutual respect and trust.
+                </p>
+              </div>
+
+              <div className="card-elevated p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                    <Star className="h-5 w-5" />
+                  </div>
+                  <h4 className="font-semibold">Excellence</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  We pursue the highest standards of quality and rigor, translating evidence-based research 
+                  into actionable strategies that deliver measurable improvement and lasting impact.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
