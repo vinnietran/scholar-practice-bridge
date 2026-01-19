@@ -21,6 +21,7 @@ import waffleHouseLogo from "@/assets/waffle-house-logo.jpg";
 import klukLogo from "@/assets/kluk-logo.jpg";
 import harvastTrailsLogo from "@/assets/harvast-trails-logo.png";
 import argoMediaLogo from "@/assets/argo-media-logo.png";
+import drBeckOffice from "@/assets/dr-beck-office.jpg";
 
 const services = [
   {
@@ -121,28 +122,37 @@ export default function Consulting() {
       {/* Hero */}
       <section className="section-padding bg-primary">
         <div className="container-wide">
-          <div className="max-w-3xl">
-            <p className="text-white/80 font-medium tracking-wide uppercase text-sm mb-2">
-              Consulting & Executive Education
-            </p>
-            <h1 className="text-white mb-6">
-              Bridging Research and Results
-            </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8">
-              I partner with business leaders, nonprofit executives, and public-sector organizations 
-              to translate rigorous research into actionable strategies that drive meaningful, 
-              sustainable improvement.
-            </p>
-            <Button 
-              variant="hero" 
-              asChild 
-              className="bg-white text-primary hover:bg-white/90"
-            >
-              <Link to="/contact">
-                Schedule a Consultation
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-xl">
+              <p className="text-white/80 font-medium tracking-wide uppercase text-sm mb-2">
+                Consulting & Executive Education
+              </p>
+              <h1 className="text-white mb-6">
+                Bridging Research and Results
+              </h1>
+              <p className="text-xl text-white/90 leading-relaxed mb-8">
+                I partner with business leaders, nonprofit executives, and public-sector organizations 
+                to translate rigorous research into actionable strategies that drive meaningful, 
+                sustainable improvement.
+              </p>
+              <Button 
+                variant="hero" 
+                asChild 
+                className="bg-white text-primary hover:bg-white/90"
+              >
+                <Link to="/contact">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="hidden lg:block">
+              <img 
+                src={drBeckOffice} 
+                alt="Dr. Joshua Beck consulting" 
+                className="rounded-xl shadow-2xl w-full max-w-md ml-auto"
+              />
+            </div>
           </div>
         </div>
       </section>

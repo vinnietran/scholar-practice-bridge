@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, GraduationCap, Briefcase, Award, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import professorHeadshot from "@/assets/professor-headshot.jpg";
+import professorHeadshot from "@/assets/dr-beck-professional.png";
 
 const education = [
   {
