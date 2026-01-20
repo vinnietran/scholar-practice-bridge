@@ -192,7 +192,7 @@ export default function Consulting() {
                 <h3 className="text-xl">Our Mission</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                DRB Management & Leadership Consulting empowers top executives and organizations of every size, 
+                We empower top executives and organizations of every size, 
                 from startups to Fortune 500 companies, nonprofits, and government entities. We transform 
                 evidence-based research into actionable insights through executive coaching, leadership development, 
                 strategic planning, and customized organizational studies. Our work elevates organizational 
