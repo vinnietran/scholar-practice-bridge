@@ -139,7 +139,7 @@ export default function Consulting() {
                 Bridging Research and Results
               </h1>
               <p className="text-xl text-white/90 leading-relaxed mb-8">
-                I partner with business leaders, nonprofit executives, and public-sector organizations 
+                We partner with business leaders, nonprofit executives, and public-sector organizations 
                 to translate rigorous research into actionable strategies that drive meaningful, 
                 sustainable improvement.
               </p>
