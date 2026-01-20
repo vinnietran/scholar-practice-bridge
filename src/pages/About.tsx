@@ -195,7 +195,7 @@ export default function About() {
         <div className="container-wide">
           <div className="flex items-center gap-3 mb-8">
             <Briefcase className="h-6 w-6 text-primary" />
-            <h2>Professional Experience</h2>
+            <h2>Selected Professional Experience</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
