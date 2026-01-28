@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      (function () {
+        // Set segmentCount to 0 for a custom domain or user site, 1 for project pages.
+        var segmentCount = 1;
+        var l = window.location;
+        var pathSegments = l.pathname.split("/").filter(Boolean);
+        var basePath = "/" + pathSegments.slice(0, segmentCount).join("/") + "/";
+        var remainingPath = pathSegments.slice(segmentCount).join("/");
+        var search = l.search ? l.search.replace(/&/g, "~and~") : "";
+        var redirectUrl =
+          l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          basePath +
+          "?/" +
+          remainingPath +
+          search +
+          l.hash;
+
+        l.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
