@@ -17,6 +17,8 @@ if (sendgridConfig.api_key) {
 const DEFAULT_ALLOWED_ORIGINS = [
   "http://localhost:8000",
   "https://vinnietran.github.io",
+  "https://joshua-j-beck.com",
+  "https://www.joshua-j-beck.com"
 ];
 
 const extraOrigins = (sendgridConfig.allowed_origins || "")
