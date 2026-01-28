@@ -1,0 +1,560 @@
+[debug] [2026-01-28T22:21:44.279Z] ----------------------------------------------------------------------
+[debug] [2026-01-28T22:21:44.283Z] Command:       /opt/homebrew/Cellar/node/23.9.0/bin/node /opt/homebrew/bin/firebase deploy --only functions:sendContactEmailJjb
+[debug] [2026-01-28T22:21:44.284Z] CLI Version:   13.31.1
+[debug] [2026-01-28T22:21:44.284Z] Platform:      darwin
+[debug] [2026-01-28T22:21:44.284Z] Node Version:  v23.9.0
+[debug] [2026-01-28T22:21:44.284Z] Time:          Wed Jan 28 2026 17:21:44 GMT-0500 (Eastern Standard Time)
+[debug] [2026-01-28T22:21:44.284Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-28T22:21:44.365Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-28T22:21:44.365Z] > authorizing via signed-in user (tranquillo.vinnie@gmail.com)
+[debug] [2026-01-28T22:21:44.365Z] [iam] checking project becks-junk-removal for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2026-01-28T22:21:44.365Z] Checked if tokens are valid: false, expires at: 1769638246220
+[debug] [2026-01-28T22:21:44.365Z] Checked if tokens are valid: false, expires at: 1769638246220
+[debug] [2026-01-28T22:21:44.365Z] > refreshing access token with scopes: []
+[debug] [2026-01-28T22:21:44.366Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-28T22:21:44.366Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-28T22:21:44.562Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-28T22:21:44.563Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-28T22:21:44.575Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions [none]
+[debug] [2026-01-28T22:21:44.575Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:44.575Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-28T22:21:44.739Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions 200
+[debug] [2026-01-28T22:21:44.740Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-28T22:21:44.740Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:44.740Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:44.740Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-01-28T22:21:44.740Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-01-28T22:21:44.986Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2026-01-28T22:21:44.986Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'becks-junk-removal'...
+[info] 
+[info] i  deploying functions 
+[debug] [2026-01-28T22:21:44.989Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:44.989Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:44.989Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal [none]
+[debug] [2026-01-28T22:21:45.097Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal 200
+[debug] [2026-01-28T22:21:45.097Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal {"projectNumber":"950690059008","projectId":"becks-junk-removal","lifecycleState":"ACTIVE","name":"becks-junk-removal","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-24T17:58:06.199708Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2026-01-28T22:21:45.099Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:45.099Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:45.099Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:45.099Z] Checked if tokens are valid: true, expires at: 1769642503563
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2026-01-28T22:21:45.100Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:45.100Z] Checked if tokens are valid: true, expires at: 1769642503563
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2026-01-28T22:21:45.100Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:45.100Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:45.100Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-28T22:21:45.100Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:45.102Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com [none]
+[debug] [2026-01-28T22:21:45.102Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:45.103Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com [none]
+[debug] [2026-01-28T22:21:45.103Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:45.104Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com [none]
+[debug] [2026-01-28T22:21:45.104Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:45.612Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com 200
+[debug] [2026-01-28T22:21:45.612Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2026-01-28T22:21:45.613Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-28T22:21:45.613Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2026-01-28T22:21:45.624Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com 200
+[debug] [2026-01-28T22:21:45.624Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2026-01-28T22:21:45.624Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com 200
+[debug] [2026-01-28T22:21:45.624Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2026-01-28T22:21:45.624Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:45.624Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:45.624Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/becks-junk-removal/adminSdkConfig [none]
+[debug] [2026-01-28T22:21:55.098Z] ----------------------------------------------------------------------
+[debug] [2026-01-28T22:21:55.100Z] Command:       /opt/homebrew/Cellar/node/23.9.0/bin/node /opt/homebrew/bin/firebase deploy --only functions:sendContactEmailJjb
+[debug] [2026-01-28T22:21:55.100Z] CLI Version:   13.31.1
+[debug] [2026-01-28T22:21:55.100Z] Platform:      darwin
+[debug] [2026-01-28T22:21:55.100Z] Node Version:  v23.9.0
+[debug] [2026-01-28T22:21:55.101Z] Time:          Wed Jan 28 2026 17:21:55 GMT-0500 (Eastern Standard Time)
+[debug] [2026-01-28T22:21:55.101Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-28T22:21:55.178Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-28T22:21:55.178Z] > authorizing via signed-in user (tranquillo.vinnie@gmail.com)
+[debug] [2026-01-28T22:21:55.179Z] [iam] checking project becks-junk-removal for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2026-01-28T22:21:55.179Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.179Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.179Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions [none]
+[debug] [2026-01-28T22:21:55.179Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:55.179Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-28T22:21:55.478Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions 200
+[debug] [2026-01-28T22:21:55.479Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-28T22:21:55.479Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.479Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.479Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-01-28T22:21:55.480Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-01-28T22:21:55.616Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2026-01-28T22:21:55.616Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'becks-junk-removal'...
+[info] 
+[info] i  deploying functions 
+[debug] [2026-01-28T22:21:55.620Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.620Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.620Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal [none]
+[debug] [2026-01-28T22:21:55.729Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal 200
+[debug] [2026-01-28T22:21:55.730Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal {"projectNumber":"950690059008","projectId":"becks-junk-removal","lifecycleState":"ACTIVE","name":"becks-junk-removal","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-24T17:58:06.199708Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2026-01-28T22:21:55.732Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.732Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.732Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.732Z] Checked if tokens are valid: true, expires at: 1769642503563
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2026-01-28T22:21:55.732Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.732Z] Checked if tokens are valid: true, expires at: 1769642503563
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2026-01-28T22:21:55.732Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.732Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:55.732Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-28T22:21:55.732Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:55.734Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com [none]
+[debug] [2026-01-28T22:21:55.734Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:55.736Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com [none]
+[debug] [2026-01-28T22:21:55.736Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:55.738Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com [none]
+[debug] [2026-01-28T22:21:55.738Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:21:56.115Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com 200
+[debug] [2026-01-28T22:21:56.115Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2026-01-28T22:21:56.141Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-28T22:21:56.141Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2026-01-28T22:21:56.155Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com 200
+[debug] [2026-01-28T22:21:56.155Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2026-01-28T22:21:56.172Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com 200
+[debug] [2026-01-28T22:21:56.172Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2026-01-28T22:21:56.172Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.172Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.172Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/becks-junk-removal/adminSdkConfig [none]
+[debug] [2026-01-28T22:21:56.428Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/becks-junk-removal/adminSdkConfig 200
+[debug] [2026-01-28T22:21:56.429Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/becks-junk-removal/adminSdkConfig {"projectId":"becks-junk-removal","storageBucket":"becks-junk-removal.firebasestorage.app"}
+[debug] [2026-01-28T22:21:56.429Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.429Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.430Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs [none]
+[debug] [2026-01-28T22:21:56.643Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs 200
+[debug] [2026-01-28T22:21:56.644Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs {"configs":[{"name":"projects/becks-junk-removal/configs/google"},{"name":"projects/becks-junk-removal/configs/sendgrid"}]}
+[debug] [2026-01-28T22:21:56.645Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.645Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.645Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.645Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.645Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables [none]
+[debug] [2026-01-28T22:21:56.646Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables [none]
+[debug] [2026-01-28T22:21:56.765Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables 200
+[debug] [2026-01-28T22:21:56.766Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables {"variables":[{"name":"projects/becks-junk-removal/configs/google/variables/places_key","updateTime":"2026-01-25T21:56:16.269811455Z"}]}
+[debug] [2026-01-28T22:21:56.766Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.766Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.766Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables/places_key [none]
+[debug] [2026-01-28T22:21:56.787Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables 200
+[debug] [2026-01-28T22:21:56.788Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables {"variables":[{"name":"projects/becks-junk-removal/configs/sendgrid/variables/to_email","updateTime":"2026-01-27T12:18:19.403431242Z"},{"name":"projects/becks-junk-removal/configs/sendgrid/variables/api_key","updateTime":"2026-01-25T15:25:48.785680223Z"},{"name":"projects/becks-junk-removal/configs/sendgrid/variables/from_email","updateTime":"2026-01-25T15:56:59.483825172Z"},{"name":"projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email","updateTime":"2026-01-28T21:32:39.057862870Z"},{"name":"projects/becks-junk-removal/configs/sendgrid/variables/subject","updateTime":"2026-01-25T15:25:49.690013854Z"}]}
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:21:56.788Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/to_email [none]
+[debug] [2026-01-28T22:21:56.789Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/api_key [none]
+[debug] [2026-01-28T22:21:56.791Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/from_email [none]
+[debug] [2026-01-28T22:21:56.793Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email [none]
+[debug] [2026-01-28T22:21:56.794Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/subject [none]
+[debug] [2026-01-28T22:21:56.925Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables/places_key 200
+[debug] [2026-01-28T22:21:56.925Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables/places_key {"name":"projects/becks-junk-removal/configs/google/variables/places_key","updateTime":"2026-01-25T21:56:16.269811455Z","text":"AIzaSyCicDwJFTPhfK9rSPcqx9vKed2G_bhiPFM"}
+[debug] [2026-01-28T22:21:56.926Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/to_email 200
+[debug] [2026-01-28T22:21:56.926Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/to_email {"name":"projects/becks-junk-removal/configs/sendgrid/variables/to_email","updateTime":"2026-01-27T12:18:19.403431242Z","text":"becksjunkva@gmail.com"}
+[debug] [2026-01-28T22:21:57.049Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/subject 200
+[debug] [2026-01-28T22:21:57.049Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/subject {"name":"projects/becks-junk-removal/configs/sendgrid/variables/subject","updateTime":"2026-01-25T15:25:49.690013854Z","text":"New Service Request - Beck's Junk"}
+[debug] [2026-01-28T22:21:57.133Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/api_key 200
+[debug] [2026-01-28T22:21:57.133Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/api_key {"name":"projects/becks-junk-removal/configs/sendgrid/variables/api_key","updateTime":"2026-01-25T15:25:48.785680223Z","text":"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"}
+[debug] [2026-01-28T22:21:57.154Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/from_email 200
+[debug] [2026-01-28T22:21:57.154Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/from_email {"name":"projects/becks-junk-removal/configs/sendgrid/variables/from_email","updateTime":"2026-01-25T15:56:59.483825172Z","text":"team@tailgate-time.com"}
+[debug] [2026-01-28T22:21:57.155Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email 200
+[debug] [2026-01-28T22:21:57.155Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email {"name":"projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email","updateTime":"2026-01-28T21:32:39.057862870Z","text":"Joshua.Joseph.beck@gmail.com"}
+[debug] [2026-01-28T22:21:57.157Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2026-01-28T22:21:57.618Z] > [functions] package.json contents: {
+  "name": "scholar-practice-bridge-functions",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0",
+    "cors": "^2.8.5",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^4.5.0"
+  }
+}
+[debug] [2026-01-28T22:21:57.618Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2026-01-28T22:21:57.618Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-01-28T22:21:57.625Z] Found firebase-functions binary at '/Users/vincenzotranquillo/Desktop/coding_projects/scholar-practice-bridge/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8188
+
+[debug] [2026-01-28T22:21:57.937Z] Got response from /__/functions.yaml {"endpoints":{"sendContactEmailJjb":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"region":["us-central1"],"httpsTrigger":{},"entryPoint":"sendContactEmailJjb"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/vincenzotranquillo/Desktop/coding_projects/scholar-practice-bridge/functions (33.49 KB) for uploading 
+[debug] [2026-01-28T22:22:01.986Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:01.986Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:01.986Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/-/functions [none]
+[debug] [2026-01-28T22:22:02.760Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/-/functions 200
+[debug] [2026-01-28T22:22:02.760Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/-/functions {"functions":[{"name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/sendContactEmailJjb","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"sendContactEmailJjb","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"becks-junk-removal@appspot.gserviceaccount.com","updateTime":"2026-01-28T21:33:57.838Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/cb0baea6-6c00-496b-839d-44758b88b95b.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"runtime":"nodejs20","ingressSettings":"ALLOW_ALL","buildId":"a649cc15-1606-4c1c-bd17-179a6b148dd2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/a649cc15-1606-4c1c-bd17-179a6b148dd2","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com","satisfiesPzi":true},{"name":"projects/becks-junk-removal/locations/us-central1/functions/createPhotoUploadUrl","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/createPhotoUploadUrl","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"createPhotoUploadUrl","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"becks-junk-removal@appspot.gserviceaccount.com","updateTime":"2026-01-27T12:53:08.428Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d3aa1d7e2a8b844151555e679d6496c32cb8882d"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/9fedfc79-49af-4ec6-aac0-4fb087a4eba5.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/createPhotoUploadUrl"},"runtime":"nodejs20","ingressSettings":"ALLOW_ALL","buildId":"62d06f8b-71f4-4a6c-90db-56a7f8e09935","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/62d06f8b-71f4-4a6c-90db-56a7f8e09935","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com","satisfiesPzi":true},{"name":"projects/becks-junk-removal/locations/us-central1/functions/submitServiceRequest","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/submitServiceRequest","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"submitServiceRequest","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"becks-junk-removal@appspot.gserviceaccount.com","updateTime":"2026-01-27T12:53:00.871Z","versionId":"10","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d3aa1d7e2a8b844151555e679d6496c32cb8882d"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/9fedfc79-49af-4ec6-aac0-4fb087a4eba5.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/submitServiceRequest"},"runtime":"nodejs20","ingressSettings":"ALLOW_ALL","buildId":"62d06f8b-71f4-4a6c-90db-56a7f8e09935","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/62d06f8b-71f4-4a6c-90db-56a7f8e09935","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com","satisfiesPzi":true},{"name":"projects/becks-junk-removal/locations/us-central1/functions/placeAutocomplete","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/placeAutocomplete","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"placeAutocomplete","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"becks-junk-removal@appspot.gserviceaccount.com","updateTime":"2026-01-27T12:53:07.282Z","versionId":"5","labels":{"firebase-functions-hash":"d3aa1d7e2a8b844151555e679d6496c32cb8882d","deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/9fedfc79-49af-4ec6-aac0-4fb087a4eba5.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/placeAutocomplete"},"runtime":"nodejs20","ingressSettings":"ALLOW_ALL","buildId":"62d06f8b-71f4-4a6c-90db-56a7f8e09935","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/62d06f8b-71f4-4a6c-90db-56a7f8e09935","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com","satisfiesPzi":true}]}
+[debug] [2026-01-28T22:22:02.761Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:02.761Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:02.761Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/becks-junk-removal/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2026-01-28T22:22:03.267Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/becks-junk-removal/locations/-/functions 200
+[debug] [2026-01-28T22:22:03.267Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/becks-junk-removal/locations/-/functions {}
+[debug] [2026-01-28T22:22:03.270Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:03.270Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:03.270Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal [none]
+[debug] [2026-01-28T22:22:03.455Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal 200
+[debug] [2026-01-28T22:22:03.456Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal {"projectNumber":"950690059008","projectId":"becks-junk-removal","lifecycleState":"ACTIVE","name":"becks-junk-removal","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-24T17:58:06.199708Z"}
+[debug] [2026-01-28T22:22:03.458Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:03.458Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:03.458Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2026-01-28T22:22:03.458Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2026-01-28T22:22:04.089Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2026-01-28T22:22:04.090Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D"}
+[debug] [2026-01-28T22:22:04.092Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip GoogleAccessId=service-950690059008%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D
+[debug] [2026-01-28T22:22:04.092Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip [stream]
+[debug] [2026-01-28T22:22:04.428Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip 200
+[debug] [2026-01-28T22:22:04.428Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: updating Node.js 20 (1st Gen) function sendContactEmailJjb(us-central1)... 
+[debug] [2026-01-28T22:22:04.432Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:04.432Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:04.432Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb updateMask=name%2CsourceUploadUrl%2CentryPoint%2Cruntime%2CdockerRegistry%2Clabels%2ChttpsTrigger.securityLevel%2CminInstances%2CmaxInstances%2CingressSettings%2CenvironmentVariables%2CserviceAccountEmail%2CavailableMemoryMb%2Ctimeout%2CvpcConnector%2CvpcConnectorEgressSettings%2CsourceToken%2CbuildEnvironmentVariables
+[debug] [2026-01-28T22:22:04.432Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb {"name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D","entryPoint":"sendContactEmailJjb","runtime":"nodejs20","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null,"buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}}
+[debug] [2026-01-28T22:22:04.994Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb 200
+[debug] [2026-01-28T22:22:04.995Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb {"name":"operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/sendContactEmailJjb","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"sendContactEmailJjb","updateTime":"2026-01-28T21:33:57.838Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"runtime":"nodejs20","buildId":"a649cc15-1606-4c1c-bd17-179a6b148dd2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/a649cc15-1606-4c1c-bd17-179a6b148dd2","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com"},"versionId":"3","updateTime":"2026-01-28T22:22:04Z"}}
+[debug] [2026-01-28T22:22:04.996Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:04.996Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:04.998Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA [none]
+[debug] [2026-01-28T22:22:05.128Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA 200
+[debug] [2026-01-28T22:22:05.129Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA {"name":"operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/sendContactEmailJjb","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"sendContactEmailJjb","updateTime":"2026-01-28T21:33:57.838Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"runtime":"nodejs20","buildId":"a649cc15-1606-4c1c-bd17-179a6b148dd2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/a649cc15-1606-4c1c-bd17-179a6b148dd2","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com"},"versionId":"3","updateTime":"2026-01-28T22:22:04Z"}}
+[debug] [2026-01-28T22:22:05.631Z] [update-default-us-central1-sendContactEmailJjb] Retrying task index 0
+[debug] [2026-01-28T22:22:05.632Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:05.632Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:05.632Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA [none]
+[debug] [2026-01-28T22:22:05.839Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA 200
+[debug] [2026-01-28T22:22:05.839Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA {"name":"operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/sendContactEmailJjb","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"sendContactEmailJjb","updateTime":"2026-01-28T21:33:57.838Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"runtime":"nodejs20","buildId":"a649cc15-1606-4c1c-bd17-179a6b148dd2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/a649cc15-1606-4c1c-bd17-179a6b148dd2","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com"},"versionId":"3","updateTime":"2026-01-28T22:22:05Z"}}
+[debug] [2026-01-28T22:22:06.839Z] [update-default-us-central1-sendContactEmailJjb] Retrying task index 0
+[debug] [2026-01-28T22:22:06.840Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:06.840Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:06.840Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA [none]
+[debug] [2026-01-28T22:22:07.046Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA 200
+[debug] [2026-01-28T22:22:07.047Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA {"name":"operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/sendContactEmailJjb","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"sendContactEmailJjb","updateTime":"2026-01-28T21:33:57.838Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"runtime":"nodejs20","buildId":"a649cc15-1606-4c1c-bd17-179a6b148dd2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/a649cc15-1606-4c1c-bd17-179a6b148dd2","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com"},"versionId":"3","updateTime":"2026-01-28T22:22:05Z","buildId":"26e5a74b-bb9f-433a-819d-69c0aeb239cf","buildName":"projects/950690059008/locations/us-central1/builds/26e5a74b-bb9f-433a-819d-69c0aeb239cf"}}
+[debug] [2026-01-28T22:22:09.048Z] [update-default-us-central1-sendContactEmailJjb] Retrying task index 0
+[debug] [2026-01-28T22:22:09.049Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:09.049Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:09.049Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA [none]
+[debug] [2026-01-28T22:22:09.167Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA 200
+[debug] [2026-01-28T22:22:09.167Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA {"name":"operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/sendContactEmailJjb","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"sendContactEmailJjb","updateTime":"2026-01-28T21:33:57.838Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"runtime":"nodejs20","buildId":"a649cc15-1606-4c1c-bd17-179a6b148dd2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/a649cc15-1606-4c1c-bd17-179a6b148dd2","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com"},"versionId":"3","updateTime":"2026-01-28T22:22:05Z","buildId":"26e5a74b-bb9f-433a-819d-69c0aeb239cf","buildName":"projects/950690059008/locations/us-central1/builds/26e5a74b-bb9f-433a-819d-69c0aeb239cf"}}
+[debug] [2026-01-28T22:22:13.169Z] [update-default-us-central1-sendContactEmailJjb] Retrying task index 0
+[debug] [2026-01-28T22:22:13.170Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:13.171Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:13.171Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA [none]
+[debug] [2026-01-28T22:22:13.285Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA 200
+[debug] [2026-01-28T22:22:13.285Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA {"name":"operations/YmVja3MtanVuay1yZW1vdmFsL3VzLWNlbnRyYWwxL3NlbmRDb250YWN0RW1haWxKamIvYVpxclJpMlJkVjA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/sendContactEmailJjb","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"sendContactEmailJjb","updateTime":"2026-01-28T21:33:57.838Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/b9c17e01-83ec-425e-ac85-b181e5d7fe3f.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640723&Signature=torKwJCFOWp5TPacjSwCCn0TyrNTeR9bLABRaMxfUQ9OJUI%2F7cnz8eD9NEzn%2F4aIJQsGPyM93uwF5IUpv9QFTV4CT%2BqcW03DAjjyrqK5n9FEVuefbMSj%2FJoFnEGnyUHQlHpryTRm%2FVZ8cnwubbalfNUuOK7B1VYHdsmPSeMVLxMVOkcjpDmZl9yssXfcBZcZOTS%2FUzPkSzaWi1qAlUKEV0RY9UgDVmhfjjjoePlxF4irVf3V8soYW%2FRJ2HxW2EcWdcATUKZvH5b8DKXNZcitmsP1Ade4nzoiei1D2vn9fAxmqsrsbUNvrSCD6FuaYqNssaXPHfVSUvWDIp4M%2BT0QhA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"runtime":"nodejs20","buildId":"a649cc15-1606-4c1c-bd17-179a6b148dd2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/a649cc15-1606-4c1c-bd17-179a6b148dd2","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com"},"versionId":"3","updateTime":"2026-01-28T22:22:05Z","buildId":"26e5a74b-bb9f-433a-819d-69c0aeb239cf","buildName":"projects/950690059008/locations/us-central1/builds/26e5a74b-bb9f-433a-819d-69c0aeb239cf"}}
+[debug] [2026-01-28T22:22:54.705Z] ----------------------------------------------------------------------
+[debug] [2026-01-28T22:22:54.710Z] Command:       /opt/homebrew/Cellar/node/23.9.0/bin/node /opt/homebrew/bin/firebase deploy --only functions:sendContactEmailJjb
+[debug] [2026-01-28T22:22:54.710Z] CLI Version:   13.31.1
+[debug] [2026-01-28T22:22:54.710Z] Platform:      darwin
+[debug] [2026-01-28T22:22:54.710Z] Node Version:  v23.9.0
+[debug] [2026-01-28T22:22:54.711Z] Time:          Wed Jan 28 2026 17:22:54 GMT-0500 (Eastern Standard Time)
+[debug] [2026-01-28T22:22:54.711Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-28T22:22:54.789Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-28T22:22:54.790Z] > authorizing via signed-in user (tranquillo.vinnie@gmail.com)
+[debug] [2026-01-28T22:22:54.790Z] [iam] checking project becks-junk-removal for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2026-01-28T22:22:54.790Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:54.790Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:54.791Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions [none]
+[debug] [2026-01-28T22:22:54.791Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:22:54.791Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-28T22:22:54.936Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions 200
+[debug] [2026-01-28T22:22:54.937Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-28T22:22:54.937Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:54.937Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:54.937Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-01-28T22:22:54.937Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-01-28T22:22:55.112Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2026-01-28T22:22:55.112Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/becks-junk-removal/serviceAccounts/becks-junk-removal@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'becks-junk-removal'...
+[info] 
+[info] i  deploying functions 
+[debug] [2026-01-28T22:22:55.116Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.116Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.116Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal [none]
+[debug] [2026-01-28T22:22:55.215Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal 200
+[debug] [2026-01-28T22:22:55.215Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal {"projectNumber":"950690059008","projectId":"becks-junk-removal","lifecycleState":"ACTIVE","name":"becks-junk-removal","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-24T17:58:06.199708Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2026-01-28T22:22:55.216Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.216Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.216Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.217Z] Checked if tokens are valid: true, expires at: 1769642503563
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2026-01-28T22:22:55.217Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.217Z] Checked if tokens are valid: true, expires at: 1769642503563
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2026-01-28T22:22:55.217Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.217Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.217Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-28T22:22:55.217Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:22:55.219Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com [none]
+[debug] [2026-01-28T22:22:55.219Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:22:55.219Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com [none]
+[debug] [2026-01-28T22:22:55.219Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:22:55.220Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com [none]
+[debug] [2026-01-28T22:22:55.220Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com x-goog-quota-user=projects/becks-junk-removal
+[debug] [2026-01-28T22:22:55.487Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com 200
+[debug] [2026-01-28T22:22:55.487Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2026-01-28T22:22:55.498Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com 200
+[debug] [2026-01-28T22:22:55.498Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2026-01-28T22:22:55.517Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com 200
+[debug] [2026-01-28T22:22:55.518Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2026-01-28T22:22:55.650Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-28T22:22:55.651Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/becks-junk-removal/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2026-01-28T22:22:55.652Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.652Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:55.652Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/becks-junk-removal/adminSdkConfig [none]
+[debug] [2026-01-28T22:22:56.045Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/becks-junk-removal/adminSdkConfig 200
+[debug] [2026-01-28T22:22:56.045Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/becks-junk-removal/adminSdkConfig {"projectId":"becks-junk-removal","storageBucket":"becks-junk-removal.firebasestorage.app"}
+[debug] [2026-01-28T22:22:56.046Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.046Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.046Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs [none]
+[debug] [2026-01-28T22:22:56.309Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs 200
+[debug] [2026-01-28T22:22:56.309Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs {"configs":[{"name":"projects/becks-junk-removal/configs/sendgrid"},{"name":"projects/becks-junk-removal/configs/google"}]}
+[debug] [2026-01-28T22:22:56.310Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.310Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.311Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.311Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.311Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables [none]
+[debug] [2026-01-28T22:22:56.312Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables [none]
+[debug] [2026-01-28T22:22:56.467Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables 200
+[debug] [2026-01-28T22:22:56.468Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables {"variables":[{"name":"projects/becks-junk-removal/configs/google/variables/places_key","updateTime":"2026-01-25T21:56:16.269811455Z"}]}
+[debug] [2026-01-28T22:22:56.469Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.469Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.469Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables/places_key [none]
+[debug] [2026-01-28T22:22:56.527Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables 200
+[debug] [2026-01-28T22:22:56.527Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables {"variables":[{"name":"projects/becks-junk-removal/configs/sendgrid/variables/subject","updateTime":"2026-01-25T15:25:49.690013854Z"},{"name":"projects/becks-junk-removal/configs/sendgrid/variables/to_email","updateTime":"2026-01-27T12:18:19.403431242Z"},{"name":"projects/becks-junk-removal/configs/sendgrid/variables/api_key","updateTime":"2026-01-25T15:25:48.785680223Z"},{"name":"projects/becks-junk-removal/configs/sendgrid/variables/from_email","updateTime":"2026-01-25T15:56:59.483825172Z"},{"name":"projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email","updateTime":"2026-01-28T21:32:39.057862870Z"}]}
+[debug] [2026-01-28T22:22:56.527Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.527Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.527Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.527Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.527Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.527Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.527Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.527Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.528Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.528Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:22:56.528Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/subject [none]
+[debug] [2026-01-28T22:22:56.528Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/to_email [none]
+[debug] [2026-01-28T22:22:56.530Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/api_key [none]
+[debug] [2026-01-28T22:22:56.531Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/from_email [none]
+[debug] [2026-01-28T22:22:56.532Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email [none]
+[debug] [2026-01-28T22:22:56.557Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables/places_key 200
+[debug] [2026-01-28T22:22:56.558Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/google/variables/places_key {"name":"projects/becks-junk-removal/configs/google/variables/places_key","updateTime":"2026-01-25T21:56:16.269811455Z","text":"AIzaSyCicDwJFTPhfK9rSPcqx9vKed2G_bhiPFM"}
+[debug] [2026-01-28T22:22:56.700Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/subject 200
+[debug] [2026-01-28T22:22:56.700Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/subject {"name":"projects/becks-junk-removal/configs/sendgrid/variables/subject","updateTime":"2026-01-25T15:25:49.690013854Z","text":"New Service Request - Beck's Junk"}
+[debug] [2026-01-28T22:22:56.780Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/to_email 200
+[debug] [2026-01-28T22:22:56.780Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/to_email {"name":"projects/becks-junk-removal/configs/sendgrid/variables/to_email","updateTime":"2026-01-27T12:18:19.403431242Z","text":"becksjunkva@gmail.com"}
+[debug] [2026-01-28T22:22:56.781Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/api_key 200
+[debug] [2026-01-28T22:22:56.781Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/api_key {"name":"projects/becks-junk-removal/configs/sendgrid/variables/api_key","updateTime":"2026-01-25T15:25:48.785680223Z","text":"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"}
+[debug] [2026-01-28T22:22:56.793Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email 200
+[debug] [2026-01-28T22:22:56.793Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email {"name":"projects/becks-junk-removal/configs/sendgrid/variables/jjb_to_email","updateTime":"2026-01-28T21:32:39.057862870Z","text":"Joshua.Joseph.beck@gmail.com"}
+[debug] [2026-01-28T22:22:56.794Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/from_email 200
+[debug] [2026-01-28T22:22:56.794Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/becks-junk-removal/configs/sendgrid/variables/from_email {"name":"projects/becks-junk-removal/configs/sendgrid/variables/from_email","updateTime":"2026-01-25T15:56:59.483825172Z","text":"team@tailgate-time.com"}
+[debug] [2026-01-28T22:22:56.796Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2026-01-28T22:22:57.354Z] > [functions] package.json contents: {
+  "name": "scholar-practice-bridge-functions",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0",
+    "cors": "^2.8.5",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^4.5.0"
+  }
+}
+[debug] [2026-01-28T22:22:57.355Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2026-01-28T22:22:57.355Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-01-28T22:22:57.363Z] Found firebase-functions binary at '/Users/vincenzotranquillo/Desktop/coding_projects/scholar-practice-bridge/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8503
+
+[debug] [2026-01-28T22:22:57.663Z] Got response from /__/functions.yaml {"endpoints":{"sendContactEmailJjb":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"region":["us-central1"],"httpsTrigger":{},"entryPoint":"sendContactEmailJjb"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/vincenzotranquillo/Desktop/coding_projects/scholar-practice-bridge/functions (33.51 KB) for uploading 
+[debug] [2026-01-28T22:23:01.714Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:01.714Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:01.714Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/-/functions [none]
+[debug] [2026-01-28T22:23:02.355Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/-/functions 200
+[debug] [2026-01-28T22:23:02.356Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/-/functions {"functions":[{"name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/sendContactEmailJjb","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"sendContactEmailJjb","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"becks-junk-removal@appspot.gserviceaccount.com","updateTime":"2026-01-28T21:33:57.838Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8d5e16f704f591a285d0e3528e28f3bab94230b9"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/cb0baea6-6c00-496b-839d-44758b88b95b.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"runtime":"nodejs20","ingressSettings":"ALLOW_ALL","buildId":"a649cc15-1606-4c1c-bd17-179a6b148dd2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/a649cc15-1606-4c1c-bd17-179a6b148dd2","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com","satisfiesPzi":true},{"name":"projects/becks-junk-removal/locations/us-central1/functions/createPhotoUploadUrl","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/createPhotoUploadUrl","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"createPhotoUploadUrl","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"becks-junk-removal@appspot.gserviceaccount.com","updateTime":"2026-01-27T12:53:08.428Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d3aa1d7e2a8b844151555e679d6496c32cb8882d"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/9fedfc79-49af-4ec6-aac0-4fb087a4eba5.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/createPhotoUploadUrl"},"runtime":"nodejs20","ingressSettings":"ALLOW_ALL","buildId":"62d06f8b-71f4-4a6c-90db-56a7f8e09935","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/62d06f8b-71f4-4a6c-90db-56a7f8e09935","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com","satisfiesPzi":true},{"name":"projects/becks-junk-removal/locations/us-central1/functions/submitServiceRequest","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/submitServiceRequest","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"submitServiceRequest","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"becks-junk-removal@appspot.gserviceaccount.com","updateTime":"2026-01-27T12:53:00.871Z","versionId":"10","labels":{"firebase-functions-hash":"d3aa1d7e2a8b844151555e679d6496c32cb8882d","deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/9fedfc79-49af-4ec6-aac0-4fb087a4eba5.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/submitServiceRequest"},"runtime":"nodejs20","ingressSettings":"ALLOW_ALL","buildId":"62d06f8b-71f4-4a6c-90db-56a7f8e09935","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/62d06f8b-71f4-4a6c-90db-56a7f8e09935","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com","satisfiesPzi":true},{"name":"projects/becks-junk-removal/locations/us-central1/functions/placeAutocomplete","httpsTrigger":{"url":"https://us-central1-becks-junk-removal.cloudfunctions.net/placeAutocomplete","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"placeAutocomplete","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"becks-junk-removal@appspot.gserviceaccount.com","updateTime":"2026-01-27T12:53:07.282Z","versionId":"5","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d3aa1d7e2a8b844151555e679d6496c32cb8882d"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/9fedfc79-49af-4ec6-aac0-4fb087a4eba5.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/placeAutocomplete"},"runtime":"nodejs20","ingressSettings":"ALLOW_ALL","buildId":"62d06f8b-71f4-4a6c-90db-56a7f8e09935","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/950690059008/locations/us-central1/builds/62d06f8b-71f4-4a6c-90db-56a7f8e09935","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/becks-junk-removal/serviceAccounts/950690059008-compute@developer.gserviceaccount.com","satisfiesPzi":true}]}
+[debug] [2026-01-28T22:23:02.357Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:02.357Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:02.357Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/becks-junk-removal/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2026-01-28T22:23:02.981Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/becks-junk-removal/locations/-/functions 200
+[debug] [2026-01-28T22:23:02.981Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/becks-junk-removal/locations/-/functions {}
+[debug] [2026-01-28T22:23:02.987Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:02.988Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:02.988Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal [none]
+[debug] [2026-01-28T22:23:03.161Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal 200
+[debug] [2026-01-28T22:23:03.162Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/becks-junk-removal {"projectNumber":"950690059008","projectId":"becks-junk-removal","lifecycleState":"ACTIVE","name":"becks-junk-removal","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-24T17:58:06.199708Z"}
+[debug] [2026-01-28T22:23:03.163Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:03.163Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:03.163Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2026-01-28T22:23:03.163Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2026-01-28T22:23:03.726Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2026-01-28T22:23:03.727Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/614b3fe3-65ea-4060-a199-27fc14e97285.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640783&Signature=sc2SS1ZFeaYZd1kTzlKh5QRdsap6zKX%2BL3HWCWaub%2BmrEZ4VRs5RQ%2BfcEKyFKLopj%2FfFU70LLjo9zvJIKu%2Baawx%2FMRoBtF%2BbTcVn28R%2B4KBhqg%2FiLNdyoIt5ImAehKFzbiAEjU0YGuc0HgzT9E6zym4N3KoeRP5CF8VrtBxXYQZT%2F0p0gB570MRHN6nm2lDlrWOCj4ZWaj2I0wBEHj5u0b4ogLqTDSNN4n0smEGKxHTvZ1YSRAD3wYlC89pNKzkylHC0iM5rcjeYrQtCgKguELQMqnzUV3Vqwac44cGZow19VCOUzdzV2AidpfiRVJAZ530LIpk9Ue6vcqd7OwcaFg%3D%3D"}
+[debug] [2026-01-28T22:23:03.727Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/614b3fe3-65ea-4060-a199-27fc14e97285.zip GoogleAccessId=service-950690059008%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640783&Signature=sc2SS1ZFeaYZd1kTzlKh5QRdsap6zKX%2BL3HWCWaub%2BmrEZ4VRs5RQ%2BfcEKyFKLopj%2FfFU70LLjo9zvJIKu%2Baawx%2FMRoBtF%2BbTcVn28R%2B4KBhqg%2FiLNdyoIt5ImAehKFzbiAEjU0YGuc0HgzT9E6zym4N3KoeRP5CF8VrtBxXYQZT%2F0p0gB570MRHN6nm2lDlrWOCj4ZWaj2I0wBEHj5u0b4ogLqTDSNN4n0smEGKxHTvZ1YSRAD3wYlC89pNKzkylHC0iM5rcjeYrQtCgKguELQMqnzUV3Vqwac44cGZow19VCOUzdzV2AidpfiRVJAZ530LIpk9Ue6vcqd7OwcaFg%3D%3D
+[debug] [2026-01-28T22:23:03.727Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/614b3fe3-65ea-4060-a199-27fc14e97285.zip [stream]
+[debug] [2026-01-28T22:23:03.936Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/614b3fe3-65ea-4060-a199-27fc14e97285.zip 200
+[debug] [2026-01-28T22:23:03.937Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/614b3fe3-65ea-4060-a199-27fc14e97285.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: updating Node.js 20 (1st Gen) function sendContactEmailJjb(us-central1)... 
+[debug] [2026-01-28T22:23:03.942Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:03.942Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:03.942Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb updateMask=name%2CsourceUploadUrl%2CentryPoint%2Cruntime%2CdockerRegistry%2Clabels%2ChttpsTrigger.securityLevel%2CminInstances%2CmaxInstances%2CingressSettings%2CenvironmentVariables%2CserviceAccountEmail%2CavailableMemoryMb%2Ctimeout%2CvpcConnector%2CvpcConnectorEgressSettings%2CsourceToken%2CbuildEnvironmentVariables
+[debug] [2026-01-28T22:23:03.942Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb {"name":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb","sourceUploadUrl":"https://storage.googleapis.com/uploads-1014482805675.us-central1.cloudfunctions.appspot.com/614b3fe3-65ea-4060-a199-27fc14e97285.zip?GoogleAccessId=service-950690059008@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769640783&Signature=sc2SS1ZFeaYZd1kTzlKh5QRdsap6zKX%2BL3HWCWaub%2BmrEZ4VRs5RQ%2BfcEKyFKLopj%2FfFU70LLjo9zvJIKu%2Baawx%2FMRoBtF%2BbTcVn28R%2B4KBhqg%2FiLNdyoIt5ImAehKFzbiAEjU0YGuc0HgzT9E6zym4N3KoeRP5CF8VrtBxXYQZT%2F0p0gB570MRHN6nm2lDlrWOCj4ZWaj2I0wBEHj5u0b4ogLqTDSNN4n0smEGKxHTvZ1YSRAD3wYlC89pNKzkylHC0iM5rcjeYrQtCgKguELQMqnzUV3Vqwac44cGZow19VCOUzdzV2AidpfiRVJAZ530LIpk9Ue6vcqd7OwcaFg%3D%3D","entryPoint":"sendContactEmailJjb","runtime":"nodejs20","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"fbe9d82f994b2374297fe45be641f49e289db66d"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}","GCLOUD_PROJECT":"becks-junk-removal","EVENTARC_CLOUD_EVENT_SOURCE":"projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null,"buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}}
+[debug] [2026-01-28T22:23:04.609Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb 400
+[debug] [2026-01-28T22:23:04.609Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb {"error":{"code":400,"message":"An operation on function sendContactEmailJjb in region us-central1 in project becks-junk-removal is already in progress. Please try again later.","status":"FAILED_PRECONDITION"}}
+[warn] ⚠  functions: failed to update function projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb 
+[error] Failed to update function projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb
+[debug] [2026-01-28T22:23:04.616Z] Total Function Deployment time: 671
+[debug] [2026-01-28T22:23:04.616Z] 1 Functions Deployed
+[debug] [2026-01-28T22:23:04.617Z] 1 Functions Errored
+[debug] [2026-01-28T22:23:04.617Z] 0 Function Deployments Aborted
+[debug] [2026-01-28T22:23:04.617Z] Average Function Deployment time: 670
+[info] 
+[info] Functions deploy had errors with the following functions:
+	sendContactEmailJjb(us-central1)
+[debug] [2026-01-28T22:23:04.736Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2026-01-28T22:23:04.737Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:04.737Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:04.737Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:04.737Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:04.738Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/becks-junk-removal/locations/us-central1/repositories/gcf-artifacts/packages/send_contact_email_jjb [none]
+[debug] [2026-01-28T22:23:04.739Z] >>> [apiv2][query] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list [none]
+[debug] [2026-01-28T22:23:05.079Z] <<< [apiv2][status] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list 404
+[debug] [2026-01-28T22:23:05.079Z] <<< [apiv2][body] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2026-01-28T22:23:05.080Z] Failed docker command with error  Request to https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2026-01-28T22:23:05.081Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:05.081Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:05.081Z] >>> [apiv2][query] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list [none]
+[debug] [2026-01-28T22:23:05.083Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/becks-junk-removal/locations/us-central1/repositories/gcf-artifacts/packages/send_contact_email_jjb 200
+[debug] [2026-01-28T22:23:05.083Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/becks-junk-removal/locations/us-central1/repositories/gcf-artifacts/packages/send_contact_email_jjb {"name":"projects/becks-junk-removal/locations/us-central1/operations/35c8cbca-3620-499a-88c8-0bd7eab2610c","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"}}
+[debug] [2026-01-28T22:23:05.084Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:05.084Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:05.084Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1beta2/projects/becks-junk-removal/locations/us-central1/operations/35c8cbca-3620-499a-88c8-0bd7eab2610c [none]
+[debug] [2026-01-28T22:23:05.171Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1beta2/projects/becks-junk-removal/locations/us-central1/operations/35c8cbca-3620-499a-88c8-0bd7eab2610c 200
+[debug] [2026-01-28T22:23:05.171Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1beta2/projects/becks-junk-removal/locations/us-central1/operations/35c8cbca-3620-499a-88c8-0bd7eab2610c {"name":"projects/becks-junk-removal/locations/us-central1/operations/35c8cbca-3620-499a-88c8-0bd7eab2610c","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"},"done":true,"response":{"@type":"type.googleapis.com/google.protobuf.Empty"}}
+[debug] [2026-01-28T22:23:05.258Z] <<< [apiv2][status] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list 404
+[debug] [2026-01-28T22:23:05.258Z] <<< [apiv2][body] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2026-01-28T22:23:05.258Z] Failed docker command with error  Request to https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2026-01-28T22:23:05.359Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:05.360Z] Checked if tokens are valid: true, expires at: 1769642503563
+[debug] [2026-01-28T22:23:05.360Z] >>> [apiv2][query] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list [none]
+[debug] [2026-01-28T22:23:05.509Z] <<< [apiv2][status] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list 404
+[debug] [2026-01-28T22:23:05.509Z] <<< [apiv2][body] GET https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2026-01-28T22:23:05.509Z] Failed docker command with error  Request to https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/becks-junk-removal/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] ⚠  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/becks-junk-removal/us/gcf 
+[debug] [2026-01-28T22:23:05.510Z] Functions deploy failed.
+[debug] [2026-01-28T22:23:05.510Z] {
+  "endpoint": {
+    "id": "sendContactEmailJjb",
+    "project": "becks-junk-removal",
+    "region": "us-central1",
+    "entryPoint": "sendContactEmailJjb",
+    "platform": "gcfv1",
+    "runtime": "nodejs20",
+    "httpsTrigger": {},
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"becks-junk-removal\",\"storageBucket\":\"becks-junk-removal.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "becks-junk-removal",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"
+    },
+    "codebase": "default",
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": true,
+    "hash": "fbe9d82f994b2374297fe45be641f49e289db66d",
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    }
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "An operation on function sendContactEmailJjb in region us-central1 in project becks-junk-removal is already in progress. Please try again later.",
+            "status": "FAILED_PRECONDITION"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v1/projects/becks-junk-removal/locations/us-central1/functions/sendContactEmailJjb?updateMask=name%2CsourceUploadUrl%2CentryPoint%2Cruntime%2CdockerRegistry%2Clabels%2ChttpsTrigger.securityLevel%2CminInstances%2CmaxInstances%2CingressSettings%2CenvironmentVariables%2CserviceAccountEmail%2CavailableMemoryMb%2Ctimeout%2CvpcConnector%2CvpcConnectorEgressSettings%2CsourceToken%2CbuildEnvironmentVariables had HTTP Error: 400, An operation on function sendContactEmailJjb in region us-central1 in project becks-junk-removal is already in progress. Please try again later.",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2026-01-28T22:23:05.627Z] Error: Failed to update function sendContactEmailJjb in region us-central1
+    at /opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:52:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Fabricator.updateV1Function (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:352:32)
+    at async Fabricator.updateEndpoint (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:152:13)
+    at async handle (/opt/homebrew/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
