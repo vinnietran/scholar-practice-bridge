@@ -1,0 +1,14 @@
+{
+  "name": "scholar-practice-bridge-functions",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0",
+    "cors": "^2.8.5",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^4.5.0"
+  }
+}
